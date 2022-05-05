@@ -1,0 +1,38 @@
+{
+    "name": "jncalderon/laravel-api",
+    "description": "To Backend with Laravel",
+    "keywords": ["laravel", "api", "back-end", "helpers"],
+    "autoload": {
+        "psr-4": {
+            "Jncalderon\\LaravelApi\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jncalderon\\LaravelApi\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nelson Calderón",
+            "email": "jncalderon.b@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^7.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jncalderon\\LaravelApi\\LaravelApiServiceProvider"
+            ],
+            "aliases": {
+                "Api": "Jncalderon\\LaravelApi\\Facades\\Api",
+                "Transformer": "Jncalderon\\LaravelApi\\Facades\\Api"
+            }
+        }
+    }
+}

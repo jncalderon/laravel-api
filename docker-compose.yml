@@ -1,0 +1,45 @@
+version: '3'
+services:
+    #php
+    app:
+        build:
+            args:
+                user: laravel
+                uid: 1000
+            context: ./docker-compose
+            dockerfile: php.dockerfile
+        # image: php
+        container_name: php-app
+        restart: unless-stopped
+        working_dir: /var/www/
+        volumes:
+            - ./:/var/www
+        networks:
+            - laravel
+
+    #Nginx Service
+    webserver:
+        image: nginx:alpine
+        container_name: webserver
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "8000:80"
+        volumes:
+            - ./:/var/www
+            - ./docker-compose/nginx:/etc/nginx/conf.d/
+        networks:
+            - laravel
+
+networks:
+    laravel:
+        driver: bridge
+volumes:
+    laravelmysql:
+        driver: local
+    laravelredis:
+        driver: local
+    laravelmeilisearch:
+        driver: local
+    dbdata:
+        driver: local
