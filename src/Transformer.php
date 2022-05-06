@@ -115,7 +115,7 @@ class Transformer
      * 
      * @return array
      */
-    public function camelcaseArray($data): array
+    public function camelcaseArray($data): array|null
     {
         if ($data === null) {
             return null;
@@ -132,7 +132,7 @@ class Transformer
      *
      * @return array
      */
-    public function snakecaseArray($data): array
+    public function snakecaseArray($data): array|null
     {
         if ($data === null) {
             return null;
