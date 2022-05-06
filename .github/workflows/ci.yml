@@ -1,11 +1,16 @@
-on: push
-name: CI
+name: Tests (PHP)
+
+on: [push]
+
 jobs:
-  phpunit:
+  tests:
+    name: Run tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      # For YAML Actions, use v1 or later
-      - uses: pxgamer/phpunit-action@master
-        with:
-          command: ./vendor/bin/phpunit
+
+      - name: Run composer install
+        run: composer install -n --prefer-dist
+
+      - name: Run tests
+        run: ./vendor/bin/phpunit

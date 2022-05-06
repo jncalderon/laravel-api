@@ -45,6 +45,15 @@ composer require jncalderon/laravel-api
 | Transform::camecaseArray()  | Camel case all keys in an array       |
 | Transform::snakecaseArray() | Snake case all keys in an array       |
 
+## Helpers
+
+Can access to the facades through below helpers
+
+```php
+api()->jsonResponse();
+transformer()->camelcaseArray();
+```
+
 ## Error handler
 
 Handler no exceptions to Json, change the extends of the file `app\Exceptions\Handler.php` to:

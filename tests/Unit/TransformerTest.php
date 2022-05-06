@@ -2,6 +2,7 @@
 
 namespace Jncalderon\LaravelApi\Tests\Unit;
 
+use Illuminate\Database\Eloquent\Model;
 use Jncalderon\LaravelApi\Tests\TestCase;
 
 class TransformerTest extends TestCase
