@@ -3,6 +3,7 @@
 namespace Jncalderon\LaravelApi;
 
 use Jncalderon\LaravelApi\ApiResponse;
+use Jncalderon\LaravelApi\Transformer;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelApiServiceProvider extends ServiceProvider

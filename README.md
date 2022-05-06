@@ -41,9 +41,9 @@ composer require jncalderon/laravel-api
 | Facade                      | Description                           |
 | --------------------------- | ------------------------------------- |
 | Api::jsonResponse()         | Transform any data to a json Response |
-| Transform::serialize()      | Serialize data to a camelcase array   |
-| Transform::camecaseArray()  | Camel case all keys in an array       |
-| Transform::snakecaseArray() | Snake case all keys in an array       |
+| Transformer::serialize()      | Serialize data to a camelcase array   |
+| Transformer::camecaseArray()  | Camel case all keys in an array       |
+| Transformer::snakecaseArray() | Snake case all keys in an array       |
 
 ## Helpers
 

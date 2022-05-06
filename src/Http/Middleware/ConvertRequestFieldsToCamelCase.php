@@ -17,7 +17,7 @@ class ConvertRequestFieldsToCamelCase
      */
     public function handle(Request $request, Closure $next)
     {
-        $request->replace(Transformer::snakecaseArray($request->all()));
+        $request->replace(transformer()->snakecaseArray($request->all()));
         return $next($request);
     }
 }
