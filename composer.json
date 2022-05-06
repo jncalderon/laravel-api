@@ -1,7 +1,13 @@
 {
     "name": "jncalderon/laravel-api",
     "description": "To Backend with Laravel",
-    "keywords": ["laravel", "api", "back-end", "helpers"],
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "api",
+        "back-end",
+        "helpers"
+    ],
     "autoload": {
         "psr-4": {
             "Jncalderon\\LaravelApi\\": "src/"
