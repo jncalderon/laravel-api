@@ -9,10 +9,10 @@
 namespace Jncalderon\LaravelApi\Exceptions;
 
 use Throwable;
-use App\Exceptions\Handlers;
 use Illuminate\Database\QueryException;
 use GuzzleHttp\Exception\RequestException;
 use Illuminate\Auth\AuthenticationException;
+use Jncalderon\LaravelApi\Exceptions\Handlers;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Access\AuthorizationException;
 use Spatie\MediaLibrary\Exceptions\FileCannotBeAdded;
