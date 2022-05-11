@@ -18,7 +18,7 @@ class ApiSerializer extends SerializerAbstract
      *
      * @return array
      */
-    public function collection(string $resourceKey, array $data): array
+    public function collection(?string $resourceKey, array $data): array
     {
         return transformer()->camelcaseArray($data);
     }
@@ -31,7 +31,7 @@ class ApiSerializer extends SerializerAbstract
      *
      * @return array
      */
-    public function item(string $resourceKey, array $data): array
+    public function item(?string $resourceKey, array $data): array
     {
         return transformer()->camelcaseArray($data);
     }
