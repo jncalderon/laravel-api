@@ -10,11 +10,13 @@ class QueryException
 
     public function __invoke(\Illuminate\Database\QueryException $exception): ?JsonResponse
     {
-        $errorCode = $exception->errorInfo[1];
-        if ($errorCode == self::ERROR_CODE_DB_QUERY_UNIQUE_CONSTRAINT_VIOLATION) {
-            return response()->json([
-                'error' => "Entry cannot be created because already exists"
-            ], 400);
+        if (count($exception->errorInfo) > 1) {
+            $errorCode = $exception->errorInfo[1];
+            if ($errorCode == self::ERROR_CODE_DB_QUERY_UNIQUE_CONSTRAINT_VIOLATION) {
+                return response()->json([
+                    'error' => "Entry cannot be created because already exists"
+                ], 400);
+            }
         }
         return null;
     }
